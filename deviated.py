@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 from nilearn.connectome import ConnectivityMeasure
 from tqdm import tqdm
 import argparse
-from models_BrainPIPS import mae_BNTF_base 
+from models_BrainPICM import mae_BNTF_base 
 
 # Method Calculate Deviation Strength
 class FullTask2Data(Dataset):
