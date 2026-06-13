@@ -1,4 +1,4 @@
-# BrainPIPS: Progressive Self-Supervised Learning with Individualized Parcellation
+# BrainPICM: Progressive Self-Supervised Learning with Individualized Community Assignment
 
 This document provides instructions on how to run the BrainPIPS framework, which consists of three main stages:
 1.  **Pre-training**: Learn robust representations of brain networks using our progressive self-supervised learning method.
