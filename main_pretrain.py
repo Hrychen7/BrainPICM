@@ -21,7 +21,7 @@ import util.misc as misc
 import util.datasets as mydataset
 from util.misc import NativeScalerWithGradNormCount as NativeScaler
 
-import models_BrainPIPS
+import models_BrainPICM
 from engine_pretrain import train_one_epoch
 from engine_pretrain import validate
 from timm.utils import  ModelEma
@@ -155,7 +155,7 @@ def main(args):
     if args.output_dir:
         Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     # define the model
-    model = models_BrainPIPS.__dict__[args.model](num_network=args.num_net, rho_0=args.rho_0)
+    model = models_BrainPICM.__dict__[args.model](num_network=args.num_net, rho_0=args.rho_0)
 
     model.to(device)
     model_ema = ModelEma(
