@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import util.misc as misc
 import util.datasets as mydataset
 
-import models_BrainPIPS
+import models_BrainPICM
 import math
 import sys
 import torch.nn as nn
@@ -201,7 +201,7 @@ def main(args):
     if args.output_dir:
         Path(args.output_dir).mkdir(parents=True, exist_ok=True)
 
-    model = models_BrainPIPS.__dict__[args.model](num_network=args.num_net, rho_0=args.rho_0)
+    model = models_BrainPICM.__dict__[args.model](num_network=args.num_net, rho_0=args.rho_0)
     if args.resume:
         checkpoint = torch.load(args.resume, map_location='cpu')
         model.load_state_dict(checkpoint['model'])
